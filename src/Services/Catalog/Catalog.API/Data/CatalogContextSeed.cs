@@ -11,14 +11,14 @@ namespace Catalog.API.Data
     {
         public static void SeedData(DbSet<Product> productCollection)
         {
-            bool existProduct = productCollection.Where(p => true).Any();
-            //bool existProduct = productCollection.Find(p => true).Any();
-            if (!existProduct)
-            {
-                productCollection.AddAsync((Product)GetPreconfiguredProducts());
+            //bool existProduct = productCollection.Where(p => true).Any();
+            ////bool existProduct = productCollection.Find(p => true).Any();
+            //if (!existProduct)
+            //{
+            //    productCollection.AddAsync((Product)GetPreconfiguredProducts());
                     
-                    //.InsertManyAsync(GetPreconfiguredProducts());
-            }
+            //        //.InsertManyAsync(GetPreconfiguredProducts());
+            //}
         }
         private static IEnumerable<Product> GetPreconfiguredProducts()
         {

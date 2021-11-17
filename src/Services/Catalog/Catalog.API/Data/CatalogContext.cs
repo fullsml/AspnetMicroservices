@@ -23,7 +23,7 @@ namespace Catalog.API.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
-            optionsBuilder.UseSqlServer(_configuration.GetValue<string>("DatabaseSettings:ConnectionString"));
+            optionsBuilder.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"));
         }
 
         

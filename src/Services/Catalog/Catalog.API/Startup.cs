@@ -34,7 +34,7 @@ namespace Catalog.API
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Catalog.API", Version = "v1" });
             });
 
-            services.AddScoped<CatalogContext>();
+            services.AddScoped<CatalogContext,CatalogContext>();
             services.AddScoped<IProductRepository, ProductRepository>();
         }
 
