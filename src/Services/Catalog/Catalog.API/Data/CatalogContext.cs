@@ -13,8 +13,11 @@ namespace Catalog.API.Data
     public class CatalogContext:DbContext //:ICatalogContext
     {
         private IConfiguration _configuration;
-        public DbSet<Product> Products { get; }
+        public DbSet<Product> Products { get; set; }
         //public DbSet<Product1> Products1 { get; }
+        public CatalogContext(DbContextOptions<CatalogContext> options) : base(options)
+        {
+        }
         public CatalogContext(IConfiguration configuration)
         {
             _configuration = configuration;
