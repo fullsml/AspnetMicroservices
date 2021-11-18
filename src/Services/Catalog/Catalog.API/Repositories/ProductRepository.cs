@@ -20,9 +20,7 @@ namespace Catalog.API.Repositories
 
         public async Task<IEnumerable<Product>> GetProducts()
         {
-            return await _context
-                .Products
-                .ToListAsync();               
+            return await _context.Products.ToListAsync();               
         }
         public async Task<Product> GetProduct(string id)
         {
